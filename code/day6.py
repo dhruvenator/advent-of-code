@@ -52,7 +52,7 @@ def puzzle2():
     guard_path, _ = puzzle1((grid, rows, cols, guard))
     for i, j in guard_path:
         grid[i][j] = '#'
-        guard_path, is_loop = puzzle1((grid, rows, cols, guard))
+        _, is_loop = puzzle1((grid, rows, cols, guard))
         if is_loop:
             num_obstructions += 1
         grid[i][j] = '.'
